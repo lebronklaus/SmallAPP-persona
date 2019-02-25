@@ -1,0 +1,37 @@
+<!--pages/test.wxml-->
+<view class='container'>
+  <text>交互</text>
+
+  <view bindtap='showModal'>
+    <text >showModal</text>  
+  </view>
+
+  <view bindtap='showLoading'>
+    <text >showLoading</text>  
+  </view>
+  
+  <view bindtap='showActionSheet'>
+    <text >showActionSheet</text>  
+  </view>
+  <text>导航栏</text>
+  <view bindtap="showNavigationBarLoading">
+    <text >showNavigationBarLoading</text>
+  </view>
+  <view bindtap="hideNavigationBarLoading">
+    <text >hideNavigationBarLoading</text>
+  </view>
+  <text>背景</text>
+  <view bindtap="setBackgroundText">
+    <text >setBackgroundText</text>
+  </view>
+  <text>Tab bar</text>
+  <view bindtap="showTabBar">
+    <text >showTabBar</text>
+  </view>
+ <text>字体</text>
+  <view bindtap="loadFontFace">
+    <text >loadFontFace</text>
+  </view>
+
+  
+</view>

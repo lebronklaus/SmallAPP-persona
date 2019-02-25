@@ -1,0 +1,10 @@
+<!--pages/profile/loginInfo.wxml-->
+<view class="input-view">
+     <label class="loginLabel">基本信息</label>
+  </view>
+<text>nickName: 傲娇的1%
+gender: 1
+language: zh_CN
+city: Rizhao
+province: Shandong
+</text>

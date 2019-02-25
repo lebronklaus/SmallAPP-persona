@@ -1,0 +1,26 @@
+<view>
+ <view class="input-view">
+     <label class="loginLabel">画像1</label>
+  </view>
+  <view class="login-icon">
+    <image class="login-img" src="../../resource/images/profile1.jpg"></image>
+  </view>
+   <view class="input-view">
+     <label class="loginLabel">画像2</label>
+  </view>
+   <view class="login-icon">
+    <image class="login-img" src="../../resource/images/profile2.jpg"></image>
+  </view>
+   <view class="input-view">
+     <label class="loginLabel">画像3</label>
+  </view>
+  <view class="login-icon">
+    <image class="login-img" src="../../resource/images/recommend1.jpg"></image>
+  </view>
+   <view class="input-view">
+     <label class="loginLabel">画像4</label>
+  </view>
+   <view class="login-icon">
+    <image class="login-img" src="../../resource/images/recommend2.jpg"></image>
+  </view>
+</view>

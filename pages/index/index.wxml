@@ -1,0 +1,49 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="login-from">
+    <view class="inputView"> 
+      <image class="nameImage" src="../../resource/icon/name.png"></image> 
+      <label class="loginLab">账号</label> 
+      <input class="inputText" placeholder="请输入用户名" bindinput="phoneInput" /> 
+    </view> 
+    <view class="line"></view> 
+  
+ <!--密码-->
+    <view class="inputView"> 
+      <image class="keyImage" src="../../resource/icon/password.png"></image> 
+      <label class="loginLab">密码</label> 
+      <input class="inputText" password="true" placeholder="请输入密码" bindinput="passwordInput" /> 
+    </view>
+
+    <!-- <view class="loginBtnView"> 
+      <button class="loginBtn" type="primary" bindtap="login">登录</button> 
+    </view> -->
+
+    <!-- <view class="loginBtnView"> 
+      <button class="loginBtn" type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="login">登录</button> 
+    </view> -->
+
+  </view>
+  <view class='loginBtn'>
+    <!-- <button class='goRegistBtn' bindtap='profile1'>画像1</button>
+    <button class='goRegistBtn' bindtap='profile2'>画像2</button> -->
+    <button class="goRegistBtn" type="warn" open-type='getUserInfo' bindgetuserinfo='doLogin'>登录</button>
+  </view>
+
+  <view>
+   
+  </view>
+  
+  <view class="usermotto">
+    
+    <text class="user-motto">{{motto}}</text>
+    <text class="user-motto">{{msg}}</text>
+  </view>
+</view>

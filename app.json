@@ -1,0 +1,47 @@
+{
+  "pages": [
+    "pages/test/test",
+    "pages/index/index",
+    "pages/welcome/welcome",
+    "pages/posts/post",
+    "pages/logs/logs",
+    "pages/profile/profile",
+    "pages/profile/profile1",
+    "pages/profile/profile2",
+    "pages/profile/loginInfo",
+    "pages/posts/post-item/post-item-template",
+    "pages/posts/post-detail/post-detail",
+    "pages/movies/movies",
+    "pages/movies/movie-list/movie-list-template",
+    "pages/movies/more-movie/more-movie",
+    "pages/movies/movie-grid/movie-grid-template",
+    "pages/movies/movie-detail/movie-detail"
+    
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#f2f2f2",
+    "navigationBarTitleText": "农业用户画像系统",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "selectedColor": "black",
+    "borderStyle": "white",
+    "backgroundColor": "#b3d4db",
+    "color": "",
+    "list": [
+      {
+        "pagePath": "pages/posts/post",
+        "text": "",
+        "iconPath": "/resource/tab/reply.png",
+        "selectedIconPath": "/resource/tab/reply-selected.png"
+      },
+      {
+        "pagePath": "pages/movies/movies",
+        "text": "",
+        "iconPath": "/resource/tab/customer.png",
+        "selectedIconPath": "/resource/tab/customer-selected.png"
+      }
+    ]
+  }
+}

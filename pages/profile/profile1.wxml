@@ -1,0 +1,11 @@
+<view>
+  <view class="login-icon">
+    <image class="login-img" src="../../resource/images/profile1.jpg"></image>
+  </view>
+  <view class="input-view">
+     <label class="loginLabel">可能感兴趣</label>
+  </view>
+  <view class="login-icon">
+    <image class="login-img" src="../../resource/images/recommend1.jpg"></image>
+  </view>
+</view>

@@ -1,0 +1,11 @@
+<view>
+  <view class="login-icon">
+    <image class="login-img" src="../../resource/images/profile2.jpg"></image>
+  </view>
+  <view class="input-view">
+     <label class="loginLabel">猜你喜欢</label>
+  </view>
+  <view class="login-icon">
+    <image class="login-img" src="../../resource/images/recommend2.jpg"></image>
+  </view>
+</view>

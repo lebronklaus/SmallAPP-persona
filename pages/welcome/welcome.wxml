@@ -1,0 +1,8 @@
+<!--pages/welcome/welcome.wxml-->
+<view class='container'>
+  <image class="user-avatar" src="/resource/images/arsene.jpg"></image>
+  <text class="user-name"><text style='color: red'>您好, </text>xiuhao</text>
+  <view class='moto-container' bindtap='onTap'>
+    <text class='moto'>登陆</text>  
+  </view>
+</view>
