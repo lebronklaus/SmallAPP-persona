@@ -1,6 +1,7 @@
 {
   "pages": [
-    "pages/test/test",
+    "pages/test/component/component",
+    "pages/test/api/test",
     "pages/index/index",
     "pages/welcome/welcome",
     "pages/posts/post",
