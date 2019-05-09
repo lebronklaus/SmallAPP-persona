@@ -1,0 +1,35 @@
+<!-- pages/news/news-detail/news-detail.wxml -->
+<view class="detail-container">
+    <!-- <image class="head-image" src="{{newsData.headImgSrc}}" /> -->
+    <!-- <image class="audio" catchtap='onMusicTap' src="{{isPlayingMusic?'/resource/images/music-stop.png':'/resource/images/music-start.png'}}" /> -->
+    
+    <text class="title">{{newsData.title}}</text>
+    
+    <view class="author-date">
+        <!-- <image class="avatar" src="{{newsData.avatar}}" /> -->
+        <!-- <text class="author">{{newsData.author}}</text> -->
+        <text class="const-text">发表于：</text>
+        <text class="date">{{newsData.date}}</text>
+        <text class="const-text">来源：</text>
+        <text class="date">{{newsData.source}}</text>
+    </view>
+    
+    <view class="tool">
+        <view class="circle-img">
+            <image wx:if="{{collected}}" catchtap='onCollectionTap' src="/resource/icon/collection.png" />
+            <image wx:else catchtap='onCollectionTap' src="/resource/icon/collection-anti.png" />
+            <image catchtap='onShareTap' class="share-img" src="/resource/icon/share.png" />
+        </view>
+        <view class="horizon"></view>
+    </view>
+    
+    <text class="detail">{{newsData.detail}}</text>
+
+    <view class="tool">
+        <view class="circle-img">
+            <image catchtap='onLikeTap' src="/resource/icon/like.png" />
+            <image catchtap='onDislikeTap' class="unlike-img" src="/resource/icon/unlike.png" />
+        </view>
+        <view class="horizon"></view>
+    </view>
+</view>

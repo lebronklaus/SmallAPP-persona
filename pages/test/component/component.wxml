@@ -50,4 +50,68 @@
       <button form-type='reset'>Reset</button>
     </view>
   </form>
+    
 </view>
+
+<view class = 'section'>
+  <!-- <view class='section__title'>普通选择器</view>
+  <picker bindchange='bindPickerChange' value='{{index}}' range='{{array}}'>
+    <view class='picker'>
+      当前选择：{{array[index]}}
+    </view>
+  </picker> -->
+
+  <!-- <view class='section__title'>多列选择器</view>
+  <picker
+    mode='multiSelector'
+    bindchange='bindMultiPickerChange'
+    bindcolumnchange='bindMultiPickerColumnChange'
+    value='{{multiIndex}}'
+    range='{{multiArray}}'
+  >
+    <view class='picker'>
+      当前选择：{{multiArray[0][multiIndex[0]]}}，{{multiArray[1][multiIndex[1]]}}，{{multiArray[2][multiIndex[2]]}}
+    </view>
+  </picker> -->
+
+  <view class="section__title">省市区选择器</view>
+  <picker
+    mode="region"
+    bindchange="bindRegionChange"
+    value="{{region}}"
+    custom-item="{{customItem}}"
+  >
+    <view class="picker">
+      当前选择：{{region[0]}}，{{region[1]}}，{{region[2]}}
+    </view>
+  </picker>
+<!-- 
+  <view wx:for='{{array}}' wx:for-index='id' wx:for-item='itemName'>
+    {{id}}:{{itemName.message}}
+  </view>
+
+  <block wx:for='{{[1,2,3]}}'>
+    <view>{{index}}：{{item}}</view>
+  </block> -->
+
+</view>
+<template is='msgItem' data='{{...item}}'/>
+
+<template name='msgItem'>
+  <view>
+    <text>{{index}}:{{msg}}</text>
+    <text> Time: {{time}}</text>
+  </view>
+</template>
+
+<template name='odd'>
+  <view>odd</view>
+</template>
+
+<template name='even'>
+  <view>even</view>
+</template>
+
+<block wx:for='{{[1,2,3,4,5]}}'>
+  <template is="{{item % 2 == 0? 'even':'odd'}}" />
+</block>

@@ -1,0 +1,3 @@
+<include src='templateb.wxml'/>
+<view> body </view>
+<include src='templatea.wxml'/>

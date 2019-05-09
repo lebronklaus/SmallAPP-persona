@@ -1,54 +1,198 @@
-/* pages/profile/profile1.wxss */
+/**profile.wxss**/
+.profile-container{
+  display: flex;
+  flex-direction: column;
+  background-color: #f2f2f2;
+  /*margin-bottom: 40rpx;
+  margin-top: 20rpx;
+  border-bottom: 1px solid #ededed;
+  border-top: 1px solid #ededed;
+  padding-bottom: 5px; */
 
-page {
-    background-color: whitesmoke;
 }
 
-.login-img {
-    width: 750rpx;
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-/*表单内容*/
-.inputView {
-    background-color: white;
-    line-height: 45px;
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
 }
 
-/*输入框*/
-.nameImage, .keyImage {
-    margin-left: 22px;
-    width: 20px;
-    height: 20px;
+.userinfo-nickname {
+  font-size: 30rpx;
+  font-weight: 500;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  color: #000;
 }
 
-.loginLabel {
-    margin: 15px 15px 15px 10px;
-    color: black;
-    font-size: 20px;
+.basicinfo-title{
+  display: flex;
+  flex-direction: row;
 }
 
-.inputText {
-    float: right;
-    text-align: right;
-    margin-right: 22px;
-    margin-top: 11px;
-    font-size: 15px;
+.title-text{
+  font-size: 30rpx;
+  font-weight: 400;
+  margin-bottom: 5px;
+  /* margin-left: 10px; */
+  color: #000;
 }
 
-.line {
-    width: 100%;
-    height: 1px;
-    background-color: gainsboro;
-    margin-top: 1px;
+.info-describe{
+  font-size: 24rpx;
+  font-weight: 400;
+}
+
+.user-setting{
+  margin-top: 10px;
+}
+
+.my-collect{
+  display: flex;
+  flex-direction: row;
+  /* align-items: center; */
+}
+
+.collect-icon{
+    height: 16px;
+    width: 16px;
+    margin-left: 8px;
+    vertical-align: middle;
+  }
+
+  .arrow-icon{
+    height: 16px;
+    width: 16px;
+    margin-right: 8px;
+    vertical-align: middle;
+  }
+
+/* .interest-tag{
+  display: flex;
+  flex-direction: row;
+} */
+
+.crops-tag{
+  display: flex;
+  flex-direction: row;
+}
+
+.special-tag{
+  display: flex;
+  flex-direction: row;
+}
+
+.tag-button{
+  width: 200rpx;
+  margin-top: 20rpx;
+  margin-left: 5rpx;
+  margin-right: 5rpx;
+  background-color: burlywood;
+  color: white;
+  border-radius: 30rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+/* .tag-button::after {
+  border-radius: 98rpx;
+  border: 0; 
+} */
+
+ .line { 
+  width: 100%; 
+  height: 1px; 
+  /* margin-top: 10px; */
+  margin-bottom: 10rpx;
+  background-color: #cccccc; 
+  margin-top: 1px; 
+ } 
+
+/* ************** */
+.usermotto {
+  margin-top: 50px;
 }
 
 /*按钮*/
-.loginBtn {
-    width: 80%;
-    margin-top: 35px;
+
+  
+/*表单内容*/
+   
+ .inputView { 
+  background-color: #fff; 
+  line-height: 44px; 
+ } 
+ /*输入框*/
+ .nameImage, .keyImage { 
+  margin-left: 22px; 
+  width: 14px; 
+  height: 14px
+ } 
+   
+ .loginLab { 
+  margin: 15px 15px 15px 10px; 
+  color: #545454; 
+  font-size: 14px
+ } 
+ .inputText { 
+  flex: block; 
+  float: right; 
+  text-align: center; 
+  margin-right: 22px; 
+  margin-top: 11px; 
+  color: #cccccc; 
+  font-size: 14px
+ } 
+   
+ .line { 
+  width: 100%; 
+  height: 1px; 
+  background-color: #cccccc; 
+  margin-top: 1px; 
+ } 
+ /*按钮*/
+ .loginBtnView { 
+  width: 100%; 
+  height: auto; 
+  background-color: #f2f2f2; 
+  margin-top: 0px; 
+  margin-bottom: 0px; 
+  padding-bottom: 0px; 
+ } 
+   
+ .loginBtn { 
+  width: 80%; 
+  margin-top: 35px; 
+ }
+
+
+
+.tool{
+    margin-top: 20rpx;
 }
 
-.goRegistBtn {
-    width: 80%;
-    margin-top: 15px;
+.circle-img{
+    float: right;
+    margin-right: 40rpx;
+    vertical-align: middle;
+}
+
+.horizon{
+    width: 660rpx;
+    height: 1px;
+    background-color: #e5e5e5;
+    vertical-align: middle;
+    position: relative;
+    top: 46rpx;
+    margin: 0 auto;
+    z-index: -99;
 }

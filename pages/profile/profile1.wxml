@@ -1,11 +1,69 @@
-<view>
-  <view class="login-icon">
-    <image class="login-img" src="../../resource/images/profile1.jpg"></image>
+<view class='profile-container'>
+  <view class="userinfo">
+    <block>
+      <image class="userinfo-avatar" src="{{avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.name}}</text>
+    </block>
+    <view class='basicinfo-title'>
+      <view>
+        <text class='title-text'>基本信息</text>
+      </view>
+      <!-- <text class='basicinfo-title-text'>基本信息</text> -->
+    </view>
+    <view class='basicuser-info'>
+      <text class='info-describe'>省份：{{userInfo.province}} </text>
+      <text class='info-describe'>城市：{{userInfo.city}} </text>
+      <text class='info-describe'>性别：{{userInfo.gender}} </text>
+    </view>
+    <view class='line'></view>
+
   </view>
-  <view class="input-view">
-     <label class="loginLabel">可能感兴趣</label>
+
+  <view class="user-interest">
+    <view class='interest-title'>
+      <text class='title-text'>兴趣标签</text>
+    </view>
+    <view class='interest-tag'>
+      <view class='crops-tag'>
+        <block wx:for="{{userInterest.cropstag}}" wx:for-item="item">
+          <button class='tag-button'bindtouchstart="handleTouchStart" bindtouchend="handleTouchEnd" bindlongpress="handleLongPress" bindtap="handleClick" data-tagname='{{item}}'>
+            <view>{{item}}</view>
+          </button>
+        </block>
+      </view>
+      <view class='special-tag'>
+        <block wx:for="{{userInterest.specialtag}}" wx:for-item="item">
+           <button class='tag-button'bindtouchstart="handleTouchStart" bindtouchend="handleTouchEnd" bindlongpress="handleLongPress" bindtap="handleClick" data-tagname='{{item}}'>
+            <view>{{item}}</view>
+          </button>
+          <!-- <view catchtap="onTagTap" data-tagname="{{item}}">
+          <text>{{item}}</text>
+        </view> -->
+        </block>
+      </view>
+    </view>
   </view>
-  <view class="login-icon">
-    <image class="login-img" src="../../resource/images/recommend1.jpg"></image>
+
+  <view class="user-setting">
+
+    <view class='line'> </view>
+
+    <view class='manage-title'>
+      <view class='my-collect' bindtap='showCollect'>
+        <image class='collect-icon' src='../../resource/icon/non-star.png'></image>
+        <text class='title-text'>我的收藏</text>
+        <image class='arrow-icon' src='../../resource/icon/arrow-right-black.png'></image>
+      </view>
+    </view>
+
+    <view class='line'> </view>
+
+    <view class='manage-title' bindtap='logout'>
+      <text class='title-text'>退出</text>
+    </view>
+  </view>
+  <view class="tool">
+    <!-- <view class='circle-image'></view> -->
+    <view class="horizon"></view>
   </view>
 </view>

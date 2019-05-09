@@ -14,10 +14,13 @@ Page({
   },
   //事件处理函数
   bindViewTap: function() {
+
+    // wx.navigateTo({
+    //   url: '../news/news'
+    // })
+
     wx.switchTab({
-      url: '../posts/post'
-      //url: '../welcome/welcome'
-      //url: '../profile/profile'
+      url: '../news/news'
     })
   },
   onLoad: function () {
@@ -56,21 +59,7 @@ Page({
       hasUserInfo: true
     })
   },
-  profile1:function(){
-
-    //this.setData({msg:"#hello"})
-    wx.navigateTo({
-      url: '../profile/profile1'
-    })
-  },
-  profile2: function () {
-
-    //this.setData({msg:"#hello"})
-    wx.navigateTo({
-      url: '../profile/profile2'
-    })
-  },
-
+  
   // 获取输入账号 
   phoneInput: function (e) {
     this.setData({
@@ -89,8 +78,13 @@ Page({
   doLogin: function (e) {
     var city = e.detail.userInfo.city;
     var province = e.detail.userInfo.province;
+    var avatarUrl = e.detail.userInfo.avatarUrl;
     var username = this.data.username;
     var password = this.data.password;
+    var baseURL = app.globalData.baseURL;
+
+    app.globalData.username = username;
+    app.globalData.avatarUrl = avatarUrl;
 
     console.log(e.detail.errMsg)
     console.log(e.detail.userInfo)
@@ -112,7 +106,19 @@ Page({
           // 调用后端，获取微信的session_key, secret
 
           wx.request({
-            url: "http://120.95.132.103:8080/wxLogin?code=" + code + "&city=" + city + "&province=" + province + "&username=" + username + "&password=" + password,
+            url: baseURL+"wxLogin",
+            // url: "http://120.95.132.103:8080/wxLogin",
+            // url: "http://120.95.132.103:8080/wxLogin?code=" + code + "&city=" + city + "&province=" + province + "&username=" + username + "&password=" + password,
+            data: {
+              code: code,
+              city: city,
+              province: province,
+              username: username,
+              password: password
+            },
+            header:{
+              'content-type': 'application/x-www-form-urlencoded;charset=utf-8'
+            },
             method: "POST",
             success: function (result) {
               console.log(result);
@@ -141,7 +147,7 @@ Page({
                 setTimeout(function () {
                   //要延时执行的代码 
                   wx.switchTab({
-                    url: '../posts/post'
+                    url: '../news/news'
                   })
                 }, 1000)
 

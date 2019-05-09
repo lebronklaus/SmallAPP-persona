@@ -1,0 +1,24 @@
+<!--pages/news/news-photo/news-photo.wxml-->
+<view class="detail-container">
+    <image class="head-image" src="{{swiperData.imgSrc}}" />
+    <!-- <image class="audio" catchtap='onMusicTap' src="{{isPlayingMusic?'/resource/images/music-stop.png':'/resource/images/music-start.png'}}" /> -->
+    <view class="author-date">
+        <!-- <image class="avatar" src="{{swiperData.avatar}}" /> -->
+        <text class="const-text">来源:</text>
+        <text class="const-text">{{swiperData.source}}</text>
+        <text class="const-text">发表于:</text>
+        <text class="date">{{swiperData.date}}</text>
+    </view>
+    <text class="title">{{swiperData.title}}</text>
+    <view class="tool">
+    </view>
+    <text class="detail">{{swiperData.detail}}</text>
+    <view class="tool">
+        <view class="circle-img">
+            <!-- <image wx:if="{{collected}}" catchtap='onCollectionTap' src="/resource/icon/collection.png" />
+            <image wx:else catchtap='onCollectionTap' src="/resource/icon/collection-anti.png" />
+            <image catchtap='onShareTap' class="share-img" src="/resource/icon/share.png" /> -->
+        </view>
+        <view class="horizon"></view>
+    </view>
+</view>

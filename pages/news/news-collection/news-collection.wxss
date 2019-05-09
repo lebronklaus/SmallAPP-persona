@@ -1,0 +1,20 @@
+/* pages/news/news-collection/news-collection.wxss */
+@import "../news-item/news-item-template.wxss";
+
+.title{
+  display: flex;
+  flex-direction: row;
+  justify-content: center
+}
+
+.head-title{
+  font-size: 34rpx;
+  font-weight: 600;
+  color: #333;
+}
+
+.head-tag-name{
+  font-size: 34rpx;
+  font-weight: 600;
+  color: #EE3A8C;
+}

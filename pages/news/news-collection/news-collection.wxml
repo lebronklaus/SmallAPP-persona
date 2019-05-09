@@ -1,0 +1,17 @@
+<!--pages/news/news-collection/news-collection.wxml-->
+<import src="news-collection-item/news-collection-item.wxml" />
+<view class='title'>
+  <text class='head-title'>以下是 </text>
+  <text class='head-tag-name'> 我收藏 </text>
+  <text class='head-title'> 的所有新闻</text>  
+</view>
+
+<view>
+  <block wx:for="{{collectedNewsList}}" wx:for-item="item" wx:for-index="idx">
+    <view catchtap="onNewsTap" data-newsId="{{idx}}" >
+      <template is="newsCollectionItem" data="{{...item}}"/>
+    </view>
+  </block>
+
+</view>
+

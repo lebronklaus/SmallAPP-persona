@@ -1,26 +1,44 @@
-<view>
- <view class="input-view">
-     <label class="loginLabel">画像1</label>
+<view class='container'>
+  <view class="userinfo">
+    <!-- <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button> -->
+    <block>
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.name}}</text>
+    </block>
+    <view class='basicinfotitle'>
+      <text>基本信息</text>
+    </view>
+    <view class='basicuserinfo'>
+      <text>省份：{{userInfo.province}} </text>
+      <text>城市：{{userInfo.city}} </text>
+      <text>性别：{{userInfo.gender}} </text>
+    </view>
   </view>
-  <view class="login-icon">
-    <image class="login-img" src="../../resource/images/profile1.jpg"></image>
+
+  <view class='interestitle'>
+    <text>兴趣标签</text>
   </view>
-   <view class="input-view">
-     <label class="loginLabel">画像2</label>
+  <view class='interestag'>
+    <view class='cropstag'>
+      <block wx:for="{{userInterest.cropstag}}" wx:for-item="item">
+        <view catchtap="ontagTap" data-tagname="{{item}}">
+          <text>{{item}}</text>
+        </view>
+      </block>
+    </view>
+    <view class='specialtag'>
+      <block wx:for="{{userInterest.specialtag}}" wx:for-item="item">
+        <view catchtap="ontagTap" data-tagname="{{item}}">
+          <text>{{item}}</text>
+        </view>
+      </block>
+    </view>
   </view>
-   <view class="login-icon">
-    <image class="login-img" src="../../resource/images/profile2.jpg"></image>
+ <view class='managetitle'>
+    <text>管理资料</text>
   </view>
-   <view class="input-view">
-     <label class="loginLabel">画像3</label>
-  </view>
-  <view class="login-icon">
-    <image class="login-img" src="../../resource/images/recommend1.jpg"></image>
-  </view>
-   <view class="input-view">
-     <label class="loginLabel">画像4</label>
-  </view>
-   <view class="login-icon">
-    <image class="login-img" src="../../resource/images/recommend2.jpg"></image>
+  <view class="tool">
+    <view class='circle-image'></view>
+    <view class="horizon"></view>
   </view>
 </view>

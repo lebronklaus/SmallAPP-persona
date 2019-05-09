@@ -1,3 +1,6 @@
 {
-  "navigationBarTitleText": "用户画像1"
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#C1FFC1",
+  "navigationBarTitleText": "个人信息",
+  "navigationBarTextStyle": "black"
 }

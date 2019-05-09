@@ -35,9 +35,17 @@ App({
     })
   },
   globalData: {
+    //baseURL: 'http://120.95.132.103:8080/persona/',
+    baseURL: 'https://www.diandianbangnong.com/persona/',
+    username: '001',
     userInfo: null,
+    avatarUrl: '/resource/images/default-avatar.jpg',
     g_isPalyingMusic: false,
     g_currentMusicPostId: null,
-    doubanBase: "http://t.yushu.im"
+    //doubanBase: "http://t.yushu.im",
+    collectedNewsList: null,
+    collectedNewsIdList: null,
+    newsList:null,
+    tagNewsList:null
   }
 })

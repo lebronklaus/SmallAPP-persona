@@ -1,13 +1,15 @@
 {
   "pages": [
-    "pages/test/component/component",
-    "pages/test/api/test",
+
     "pages/index/index",
+
+    "pages/profile/profile1",
+
     "pages/welcome/welcome",
     "pages/posts/post",
     "pages/logs/logs",
     "pages/profile/profile",
-    "pages/profile/profile1",
+    
     "pages/profile/profile2",
     "pages/profile/loginInfo",
     "pages/posts/post-item/post-item-template",
@@ -16,30 +18,45 @@
     "pages/movies/movie-list/movie-list-template",
     "pages/movies/more-movie/more-movie",
     "pages/movies/movie-grid/movie-grid-template",
-    "pages/movies/movie-detail/movie-detail"
+    "pages/movies/movie-detail/movie-detail",
+
+    "pages/test/component/templatec",
+    "pages/test/api/test",
+
+    "pages/news/news",
+    "pages/news/news-detail/news-detail",
+    "pages/news/news-photo/news-photo",
+
+    "pages/news/news-tag/news-tag",
+
+    
+
+    "pages/news/news-collection/news-collection",
+    "pages/news/news-collection/news-collection-item/news-collection-item"
     
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#f2f2f2",
-    "navigationBarTitleText": "农业用户画像系统",
+    "navigationBarTitleText": "农业信息个性化推荐系统",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
     "selectedColor": "black",
     "borderStyle": "white",
-    "backgroundColor": "#b3d4db",
+    "backgroundColor": "#C1FFC1",
     "color": "",
     "list": [
       {
-        "pagePath": "pages/posts/post",
-        "text": "",
+        "pagePath": "pages/news/news",
+        "text": "文章列表",
         "iconPath": "/resource/tab/reply.png",
         "selectedIconPath": "/resource/tab/reply-selected.png"
       },
+      
       {
-        "pagePath": "pages/movies/movies",
-        "text": "",
+        "pagePath": "pages/profile/profile1",
+        "text": "个人信息",
         "iconPath": "/resource/tab/customer.png",
         "selectedIconPath": "/resource/tab/customer-selected.png"
       }

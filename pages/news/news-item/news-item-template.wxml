@@ -1,0 +1,19 @@
+<!--pages/newss/news-item/news-item-templete.wxml-->
+<template name="newsItem">
+    <view class="news-container">
+      <view class="news-author-date">
+        <!-- <image class="news-author" src='{{avatar}}'></image> -->
+        <text class="news-date">日期：{{date}}</text>
+        <text class="news-date"> 来源：{{source}}</text>
+      </view>
+      <text class="news-title">{{title}}</text>
+      <!-- <image class="news-image" src='{{imgSrc}}'></image> -->
+      <text class="news-content">{{content}}</text>
+      <view class="news-like">
+        <image class="news-like-image" src='/resource/icon/like.png'></image>
+        <text class="news-like-font">{{like}}</text>
+        <image class="news-like-image" src='/resource/icon/unlike.png'></image>
+        <text class="news-like-font">{{dislike}}</text>
+      </view>
+    </view>
+</template>

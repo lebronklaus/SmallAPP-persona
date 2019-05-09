@@ -1,0 +1,16 @@
+<!--pages/news/news-tag/news-tag.wxml-->
+<import src="../news-item/news-item-template.wxml" />
+<view class='title'>
+  <text class='head-title'>以下是关于 </text>
+  <text class='head-tag-name'> {{tagName}} </text>
+  <text class='head-title'> 的相关新闻</text>  
+</view>
+
+<view>
+  <block wx:for="{{tagNewsList}}" wx:for-item="item" wx:for-index="idx" >
+    <view catchtap="onNewsTap" data-newsId="{{item.newsId}}" data-itemId="{{idx}}">
+      <template is="newsItem" data="{{...item}}"/>
+    </view>
+  </block>
+
+</view>

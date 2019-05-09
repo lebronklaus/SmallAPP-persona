@@ -24,12 +24,12 @@ Page({
     var comingSoonUrl = app.globalData.doubanBase + "/v2/movie/coming_soon" + "?start=0&count=3";
     var top250Url = app.globalData.doubanBase + "/v2/movie/top250" + "?start=0&count=3";
 
-    // this.getMovieListData(inTheatersUrl, "inTheaters", "正在热映");
-    // this.getMovieListData(comingSoonUrl, "comingSoon", "即将上映");
-    // this.getMovieListData(top250Url, "top250", "Top250");
-    this.getMovieListData(inTheatersUrl, "inTheaters", "基本标签");
-    this.getMovieListData(comingSoonUrl, "comingSoon", "长期标签");
-    this.getMovieListData(top250Url, "top250", "短期标签");
+    this.getMovieListData(inTheatersUrl, "inTheaters", "正在热映");
+    this.getMovieListData(comingSoonUrl, "comingSoon", "即将上映");
+    this.getMovieListData(top250Url, "top250", "Top250");
+    // this.getMovieListData(inTheatersUrl, "inTheaters", "基本标签");
+    // this.getMovieListData(comingSoonUrl, "comingSoon", "长期标签");
+    // this.getMovieListData(top250Url, "top250", "短期标签");
 
 
   },
